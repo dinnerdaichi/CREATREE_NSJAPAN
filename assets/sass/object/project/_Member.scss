@@ -1,0 +1,52 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+@use "../../foundation/base" as *;
+
+.Member {
+  padding-block: rclamp(90) rclamp(138);
+}
+.section__inner {
+}
+.Section__title {
+}
+.Member__title {
+  width: rclamp(334);
+  margin-right: auto;
+}
+.Member__title-image {
+}
+
+
+.Member{
+
+  .Splide__wrap{
+
+    width: 100vw;
+    margin:0 calc(50% - 50vw);
+    margin-block-start: rclamp(50);
+    margin-block-end: rclamp(48);
+    height: rclamp(300);
+  }
+
+  .splide__list{
+    height: rclamp(300);
+  }
+
+  .splide__slide{
+    width: rclamp(188)!important;
+    height: 100%;
+
+    img{
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .splide__sub{
+    font-size: rclamp(24);
+    margin-block-start: rclamp(30);
+    line-height: 1.5;
+    color: white;
+  }
+
+}

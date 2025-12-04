@@ -1,0 +1,76 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+@use "../../foundation/base" as *;
+
+.News {
+  padding-block-start: rclamp(128);
+  padding-block-end: rclamp(94);
+
+  .section__inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: rclamp(86);
+    width: rclamp(1000);
+    padding-inline: 0;
+
+  }
+
+  .Section__title {
+    width: rclamp(215);
+  }
+}
+.News__title {
+  width: rclamp(215);
+}
+.News__title-image {
+}
+.Section__title-sub {
+}
+
+
+
+.News__content{
+  margin-top: 26px;
+}
+
+.News__list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+
+
+}
+
+.News__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #707070;
+  flex-direction: column;
+}
+
+.News__item-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.News__date {
+    color: #989898;
+    font-weight: bold;
+  font-size: rclamp(18);
+  line-height: 2;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+.News__title {
+  font-size: 15px;
+  line-height: calc(51 / 15);
+  flex-grow: 1;
+  padding-left: 10px;
+  text-align: left;
+  color: #3E3E3E;
+}

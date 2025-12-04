@@ -1,0 +1,45 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+@use "../../foundation/base" as *;
+
+
+.CaseStudy {
+  background-color: var(--color-light-blue);
+  padding-block: rclamp(324) rclamp(156);
+}
+.section__inner {
+}
+.Section__title {
+}
+.CaseStudy__title {
+  width: rclamp(466);
+  text-align: left;
+}
+.CaseStudy__title-image {
+  width: 100%;
+}
+
+
+.test{
+  height: 1000px;
+}
+
+.CaseStudy{
+
+  .Splide__wrap{
+
+    width: 100vw;
+    margin:0 calc(50% - 50vw);
+    padding-left: rclamp(120);
+    margin-block-start: rclamp(38);
+    margin-block-end: rclamp(48);
+  }
+
+  .splide__sub{
+    font-size: rclamp(24);
+    margin-block-start: rclamp(30);
+    line-height: 1.5;
+    color: white;
+  }
+
+}

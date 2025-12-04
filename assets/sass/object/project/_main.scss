@@ -1,0 +1,120 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 300vh;
+  background: #f9f9f9;
+}
+
+
+#loading {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/bg_fadeIn.png") center/cover no-repeat;
+  opacity: 0;
+}
+
+// ボタン
+.ViewMore {
+  width: rclamp(210);
+  margin-right: auto;
+  border-bottom: 1px solid var(--color-blue);
+  height: rclamp(45);
+  padding-inline: rclamp(20);
+  font-size: rclamp(18);
+
+  &.--WhiteColor{
+
+    border-bottom: 1px solid white;
+    color: white;
+    .ViewMore__link {
+      color: white;
+    }
+  }
+}
+.ViewMore__link {
+  color: var(--color-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+
+  span{
+    letter-spacing: 0.1em;
+  }
+}
+.ViewMore__image {
+  width: rclamp(8);
+}
+
+
+
+
+/* 画像の基本設定（レイアウト安定のため） */
+.splide__slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.header {
+  opacity: 0;
+  background-color: none;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  position:fixed;
+
+  h1 {
+    margin: 0;
+  }
+
+}
+
+.header__logo {
+  img {
+    width: 183px;
+    height: 24px;
+  }
+}
+
+.header__nav {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    font-size: 12px;
+    margin-right: 12px;
+  }
+}
+
+
+.Gsap__panel01 {
+  // margin-top: 180vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ccc;
+  /* ここが変わる！ */
+  font-size: 40px;
+  font-weight: bold;
+  transition: background 0s;
+  margin-top: 200px;
+}

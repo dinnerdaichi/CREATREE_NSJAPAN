@@ -1,0 +1,31 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+@use "../../foundation/base" as *;
+
+
+.About {
+  background-color: var(--color-light-blue);
+  padding-block-start: rclamp(192);
+  margin-block-start: rclamp(500);
+  height: rclamp(690);
+}
+.About__content {
+  text-align: center;
+  color: var(--color-blue);
+  width: rclamp(1074);
+  margin-inline: auto;
+  height: rclamp(681);
+}
+.About__title {
+  font-size: rclamp(48);
+  line-height: 1.5;
+}
+.About__sub {
+  line-height: 2.16;
+  margin-top: rclamp(60);
+}
+.About__image {
+  width: 100%;
+  margin-top: rclamp(77);
+  display: block;
+}

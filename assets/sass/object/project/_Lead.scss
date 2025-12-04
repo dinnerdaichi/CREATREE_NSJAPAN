@@ -1,0 +1,41 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+@use "../../foundation/base" as *;
+
+
+.Lead {
+  background-image: url("../img/lead_bg.png");
+  background-size: cover;
+  display: grid;
+  width: 100%;
+  filter: blur(0px);
+
+}
+
+.Lead__bg{
+  display: grid;
+grid-area: 1 / 1 / 2 / 2;
+width: 100vw;
+height: 100%;
+background-color: white;
+opacity: 0;
+z-index: 0;
+filter: blur(0px);
+}
+
+.Lead__content {
+  text-align: center;
+  display: grid;
+grid-area: 1 / 1 / 2 / 2;
+z-index: 1;
+}
+.Lead__title {
+  color: white;
+  font-size: rclamp(48);
+}
+.Lead__sub {
+  color: white;
+  font-size: rclamp(22);
+  line-height: 2.16;
+  margin-block-start: rclamp(60);
+}

@@ -1,0 +1,45 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+@use "../../foundation/base" as *;
+
+.mv {
+  background: url("../img/bg_fadeIn.png") center/cover no-repeat;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  width: 100%;
+}
+
+.mv__content {
+  opacity: 0;
+  width: 100%;
+  margin-inline: auto;
+  margin-top: rclamp(248);
+}
+
+
+.Mv__title-wrap {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ max-width: rclamp(1096);
+ margin-inline: auto;
+ margin-block-start: rclamp(56);
+ height: rclamp(410);
+}
+.Mv__title {
+
+  color: var(--color-blue);
+  line-height: 1.5;
+}
+.mv__title-head {
+  font-size: rclamp(48);
+  white-space: nowrap;
+  font-weight: 500;
+}
+.Mv__title-sub {
+  font-size: rclamp(20);
+}
+.Mv__title-image {
+}
