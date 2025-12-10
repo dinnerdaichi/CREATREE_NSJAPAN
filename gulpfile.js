@@ -178,21 +178,20 @@ $projectMaxViewport: 1920;
   done();
 });
 
-// EJSテンプレートをHTMLにコンパイルするタスク
-gulp.task('ejs', () => {
-  if (!argv.ejs) return;  // EJSの処理をスキップする場合
-  return gulp.src('./assets/ejs/**/*.ejs')
-    .pipe(ejs({}, {}, { ext: '.html' }).on('error', console.error))
+
+gulp.task('ejs', function () {
+  return gulp.src([
+    './assets/ejs/**/*.ejs',
+    '!./assets/ejs/**/_*.ejs'
+  ])
+    .pipe(ejs())
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest('./assets/dist'));
 });
 
-// 監視タスク
-gulp.task('watch', () => {
-  if (argv.ejs) {
-    gulp.watch('./assets/ejs/**/*.ejs', gulp.series('ejs')); // EJSテンプレートの監視
-  }
-  // 他の監視設定があればここに追加
+
+gulp.task('watch', function () {
+  gulp.watch('./assets/ejs/**/*.ejs', gulp.series('ejs'));
 });
 
 // デフォルトタスク
@@ -237,7 +236,7 @@ const themeName = 'camel';
 gulp.task('path', function () {
   return gulp.src(`wp-content/themes/${themeName}/**/*.php`, { base: './' })
 
-     // imgタグのsrc置換
+    // imgタグのsrc置換
     .pipe(replace(/(<img[^>]*src=["'])\.?\/?assets\/img\/(.*?)["']/g, (match, p1, p2) => {
       if (match.includes('get_template_directory_uri')) return match;
       return `${p1}<?php echo get_template_directory_uri(); ?>/assets/img/${p2}"`;

@@ -10,11 +10,15 @@
   width: 100%;
 }
 
-.mv__content {
+body:has(#loading) .mv__content,
+body:has(#loading) .header {
   opacity: 0;
+}
+
+.mv__content {
   width: 100%;
   margin-inline: auto;
-  margin-top: rclamp(248);
+  margin-top: rclamp(124);
 }
 
 

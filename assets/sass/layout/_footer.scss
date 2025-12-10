@@ -1,2 +1,67 @@
 @use "../foundation/mixin" as m;
 @use "../foundation/functions" as *;
+@use "../foundation/base" as *;
+
+footer{
+  background-color: #333333;
+  padding-block-start: rclamp(60);
+  padding-block-end: rclamp(30);
+  color: white;
+}
+
+.Footer__content {
+  width: rclamp(1200);
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rclamp(348);
+  border-bottom: rclamp(1) solid white;
+  padding-block-end: rclamp(40);
+
+}
+.Footer__content-left {
+  width: rclamp(314);
+}
+.Footer__logo {
+}
+.Footer__company {
+  font-size: rclamp(24);
+  line-height: 2;
+
+}
+.Footer__address {
+  font-size: rclamp(16);
+  font-weight: 500;
+  left: 1.5em;
+}
+.Footer__content-right {
+  width: rclamp(300);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: rclamp(30);
+}
+.Footer__list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  gap: rclamp(8);
+}
+.Footer__list-item {
+}
+.Footer__link {
+  font-size: rclamp(16);
+  line-height: 1.5;
+  color: white;
+}
+
+.Footer__copy{
+  font-size: rclamp(14);
+  line-height: 1.5;
+  margin-block-start: rclamp(24);
+  display: block;
+  text-align: center;
+}

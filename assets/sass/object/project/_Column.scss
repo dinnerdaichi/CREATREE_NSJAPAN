@@ -1,0 +1,66 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+@use "../../foundation/base" as *;
+
+
+.Column {
+  height: rclamp(544);
+  background-color: var(--color-light-blue);
+  margin-top: rclamp(330);
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+
+  .Section__title {
+    width: rclamp(346);
+  }
+
+}
+
+.Column__wrap{
+
+  margin-top: rclamp-negative(-500,1440);
+
+
+}
+.section__inner {
+}
+.Post__title-image {
+}
+.Section__title-sub {
+}
+.section__content {
+}
+.Column__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rclamp(30);
+  margin-top: rclamp(60);
+  margin-block-end: rclamp(60);
+
+}
+.Column__item {
+}
+.Column__item-image {
+}
+.Column__item-title {
+  font-size: rclamp(16);
+  line-height: 1.4;
+  margin-top: rclamp(20);
+}
+.Column__item-category {
+  font-size: rclamp(12);
+  line-height: 1.4;
+  display: block;
+  margin-top: rclamp(6);
+}
+.Column__item-date {
+  font-size: rclamp(10);
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-top: rclamp(6);
+  color: #989898;
+
+}

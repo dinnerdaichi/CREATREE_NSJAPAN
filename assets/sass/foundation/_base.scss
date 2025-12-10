@@ -1,6 +1,6 @@
 @use "./mixin" as m;
 @use "./functions" as *;
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Old+Mincho&display=swap');
 
 :root {
   --color-blue: #00168B;
@@ -15,6 +15,7 @@
 
 body{
   font-family: "Noto Sans JP", sans-serif;
+  --font-Mincho:"Zen Old Mincho", serif;
 }
 
 h1,
@@ -74,17 +75,38 @@ img {
 
 .section__inner{
   width: 100%;
+  max-width: rclamp(1440);
   margin-inline: auto;
   padding-inline: rclamp(120);
 
 }
 
+.Section__title-english{
+  font-size: rclamp(72);
+  color: var(--color-blue);
+  font-family:var(--font-Mincho) ;
+  white-space: nowrap;
+
+  &.--ColorWhite{
+    color: white;
+  }
+}
 
 .Section__title-sub{
   font-size: rclamp(14);
   color: black;
+  margin-top: rclamp(14);
 
-  &.--WhiteColor{
+  &.--ColorWhite{
     color: white;
   }
+}
+
+.js-fadeIn {
+  opacity: 0;
+  transform: translateY(30px); /* 下からふわっと */
+}
+.js-zoomIn {
+  transform: scale(0.9);
+  opacity: 0;
 }

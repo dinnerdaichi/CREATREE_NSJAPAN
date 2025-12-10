@@ -1,0 +1,49 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+@use "../../foundation/base" as *;
+
+.Recruit {
+  padding-block-start: rclamp(20);
+  padding-block-end:rclamp(240);
+
+  .Section__title {
+    width: rclamp(500);
+  }
+}
+.section__inner {
+}
+.Recruit__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: rclamp-negative(-200,1440);
+  width: 100vw;
+  margin:0 calc(50% - 50vw);
+  padding-inline-start: rclamp(120);
+  gap: rclamp(80);
+}
+.Post__title-image {
+  width: rclamp(336);
+
+}
+.Section__title-sub {
+}
+.Section__sub-text {
+  font-size: rclamp(18);
+  line-height: 2;
+  font-weight: bold;
+  margin-top: rclamp(30);
+  margin-bottom: rclamp(30);
+}
+.ViewMore {
+}
+.ViewMore__link {
+}
+.ViewMore__image {
+}
+.Recruit__image-wrap {
+  width: rclamp(740);
+  margin-top: rclamp-negative(-80,1440);
+}
+.Recruit__image {
+}

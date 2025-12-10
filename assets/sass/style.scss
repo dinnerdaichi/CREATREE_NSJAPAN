@@ -21,4 +21,13 @@
 @use "./object/project/About";
 @use "./object/project/CaseStudy";
 @use "./object/project/Member";
-@use "./object/project/News";
+@use "./object/project/Post";
+@use "./object/project/Column";
+@use "./object/project/Recruit";
+@use "./object/project/Bottom";
+
+@use "./object/project/Page-about";
+@use "./object/project/Archive-column";
+@use "./object/project/Archive-news";
+@use "./object/project/Single";
+@use "./object/project/Page-privacypolicy";

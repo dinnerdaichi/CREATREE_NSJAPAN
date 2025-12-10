@@ -44,7 +44,7 @@ gsap.to(".Lead__title", {
   }
 });
 gsap.to(".Lead__bg", {
-  opacity:0.4,
+  opacity: 0.8,
 
   scrollTrigger: {
     trigger: ".Gsap__panel01",
@@ -54,7 +54,7 @@ gsap.to(".Lead__bg", {
   }
 });
 gsap.to(".CaseStudy", {
-  backgroundColor:"#1C2A74",
+  backgroundColor: "#1C2A74",
 
   scrollTrigger: {
     trigger: ".CaseStudy",
@@ -64,36 +64,90 @@ gsap.to(".CaseStudy", {
   }
 });
 
-gsap.utils.toArray(".fade-in").forEach((el) => {
+gsap.utils.toArray(".js-fadeIn").forEach((el) => {
   gsap.to(el, {
     opacity: 1,
     duration: 1,
-    y: -50,
+    y: 0,
     scrollTrigger: {
       trigger: el,
-      start: "top 80%", // 画面の80%位置にきたら開始
-      toggleActions: "play none none reverse",
+      start: el.classList.contains("js-fadeIn-footer") ? "top bottom" : "top 80%",
+      once: true,
+    },
+  });
+});
+
+gsap.utils.toArray(".js-zoomIn").forEach((el) => {
+  gsap.to(el, {
+    opacity: 1,
+    scale: 1,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: el,
+      start: el.classList.contains("js-zoomIn-footer") ? "top bottom" : "top 80%",
+      once: true,
     },
   });
 });
 
 
+gsap.utils.toArray(".Bottom__slide").forEach((el, i) => {
+  gsap.to(el, {
+    x: "100%",
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 80%",
+      once: true,
+    },
+    delay: i * 0.2, // 0.2秒ずつずらして順番にスライド
+  });
+});
+
+// 見出し一文字ずつ
+gsap.registerPlugin(SplitText, ScrollTrigger);
+
+gsap.utils.toArray(".split").forEach((el) => {
+  const split = new SplitText(el, { type: "chars, words" });
+
+  gsap.from(split.chars, {
+    opacity: 0,
+    y: 20,
+    stagger: 0.05,
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: el,      // 個々の .split 要素で発火
+      start: "top 80%", // 画面の80%位置で発火
+      once: true,       // 一回だけ再生
+    }
+  });
+});
+
+// ローディング
 document.addEventListener("DOMContentLoaded", () => {
+
+   // #loading が存在しないページは処理しない！
+  if (!document.getElementById("loading")) {
+    return;
+  }
   const tl = gsap.timeline();
 
   tl.fromTo(".loading-logo",
-    { opacity: 0, scale: 0.8, filter: "blur(6px)" },
+    { opacity: 0, scale: 1, filter: "blur(6px)" },
     { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1, ease: "power2.out" }
   )
     .to(".loading-logo", {
       opacity: 0,
-      duration: 0.6,
-      ease: "power2.inOut"
+      duration: 1,
+      // ease: "power2.inOut"
     })
 
     .to("#loading", {
       opacity: 0,
-      duration: 0.8,
+      duration: 1.5,
       ease: "power2.inOut",
       onComplete() {
         document.getElementById("loading").style.display = "none";
@@ -103,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ← ここ大事！！！
     .to([".mv__content", ".header"], {
       opacity: 1,
-      duration: 1,
+      duration: 5,
       ease: "power2.out",
 
     });
@@ -136,9 +190,16 @@ document.addEventListener("DOMContentLoaded", function () {
   sliders.forEach((slider) => {
     let options = {
       type: "loop",
-      autoplay: true,
+      // autoplay: true,
       perPage: 3,
       gap: 16,
+      arrows: false,
+      pagination: false, // ページネーションを非表示
+      drag: false, // ドラッグ無効
+      autoScroll: {
+    speed: 0.5, // スクロール速度
+    pauseOnHover: false, // カーソルが乗ってもスクロールを停止させない
+  },
     };
 
     if (slider.classList.contains("splide--case")) {
@@ -155,6 +216,10 @@ document.addEventListener("DOMContentLoaded", function () {
     //   options.gap = 24;
     // }
 
-    new Splide(slider, options).mount();
+    new Splide(slider, options).mount(window.splide.Extensions);
   });
+});
+
+MicroModal.init({
+  disableScroll: true,
 });

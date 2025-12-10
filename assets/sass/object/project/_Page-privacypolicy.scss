@@ -1,0 +1,59 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+@use "../../foundation/base" as *;
+
+
+.Page {
+}
+.PagePrivacyPolicy {
+
+
+
+  .Section__title-english{
+    font-size: rclamp(70);
+    color: #1C2A74;
+
+  }
+
+  .Section__title-sub{
+    font-size: rclamp(14);
+    font-weight: bold;
+    color: #222;
+    margin-block-start: 0;
+  }
+  .mv {
+  }
+  .section__inner {
+    width: 100%;
+    padding-inline: 0;
+  }
+  .PagePrivacyPolicy__wrap {
+    padding-bottom: rclamp(500);
+    width: rclamp(900);
+    margin-inline: auto;
+    padding-top: rclamp(200);
+  }
+  .Section__title {
+    width: rclamp(900);
+    margin-inline: auto;
+  }
+  .Section__title-english {
+  }
+  .split {
+  }
+  .--ColorWhite {
+  }
+  .Section__title-sub {
+  }
+  .js-fadeIn {
+  }
+  .PagePrivacyPolicy__content {
+    margin-top: rclamp(80);
+  }
+  .PagePrivacyPolicy__text {
+    font-size: rclamp(16);
+    font-weight: bold;
+    line-height: 2;
+    letter-spacing: 0.05em;
+  }
+}

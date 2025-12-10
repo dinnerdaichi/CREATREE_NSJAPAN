@@ -25,20 +25,22 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
     <header class="header">
 
-      <h1 class="header__logo">
-        <img src="./assets/img/img_logo.png" alt="">
-      </h1>
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <img src="./assets/img/logo__pc.svg" alt="">
+        </h1>
+        <nav class="header__nav">
+          <a href="">ホーム</a>
+          <a href="">会社概要</a>
+          <a href="">事業内容</a>
+          <a href="">お知らせ</a>
+          <a href="">コラム</a>
+          <a href="">採用</a>
+          <a href="">資料ダウンロード</a>
+          <a href="">お問い合わせ</a>
 
-      <nav class="header__nav">
-        <a href="">キャンペーンについて</a>
-        <a href="">特典</a>
-        <a href="">おすすめスポット</a>
-        <a href="">よくある質問</a>
-        <a href="">参加要項</a>
-        <div class="c-button header__button">
-          <a href="">応募してみる</a>
-        </div>
-      </nav>
+        </nav>
+      </div>
 
 
     </header>
@@ -135,8 +137,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
         <div class="About__content">
           <h2 class="About__title">私たちは、新規事業家です。</h2>
-          <p class="About__sub">NSJAPANでは業種問わず新規事業の支援をしております。<br>新規サービスの勝ちパターン創出や、既存製品の新たな販路拡大が得意です。</p>
-          <img src="./assets/img/about_image.png" alt="" class="About__image">
+          <p class="About__sub js-fadeIn">NSJAPANでは業種問わず新規事業の支援をしております。<br>新規サービスの勝ちパターン創出や、既存製品の新たな販路拡大が得意です。</p>
+          <img src="./assets/img/about_image.png" alt="" class="About__image js-zoomIn">
 
         </div>
 
@@ -148,8 +150,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <div class="section__inner">
 
           <div class="Section__title CaseStudy__title">
-            <img src="./assets/img/title_case-study.svg" alt="" class="CaseStudy__title-image">
-            <p class="Section__title-sub --WhiteColor">成果創出例</p>
+            <!-- <img src="./assets/img/title_case-study.svg" alt="" class="CaseStudy__title-image"> -->
+            <p class="Section__title-english split --ColorWhite">CASE STUDY</p>
+            <h2 class="Section__title-sub js-fadeIn --ColorWhite">成果創出例</h2>
           </div>
 
           <div class="Splide__wrap">
@@ -157,19 +160,19 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <img src="./assets/img/mv_slide01.png" alt="">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
                     <p class="splide__sub">成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例</p>
                   </li>
                   <li class="splide__slide">
-                    <img src="./assets/img/mv_slide01.png" alt="">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
                     <p class="splide__sub">成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例</p>
                   </li>
                   <li class="splide__slide">
-                    <img src="./assets/img/mv_slide01.png" alt="">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
                     <p class="splide__sub">成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例</p>
                   </li>
                   <li class="splide__slide">
-                    <img src="./assets/img/mv_slide01.png" alt="">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
                     <p class="splide__sub">成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例成果創出例</p>
                   </li>
 
@@ -178,7 +181,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </div>
           </div>
 
-          <div class="ViewMore --WhiteColor">
+          <div class="ViewMore js-fadeIn --ColorWhite">
             <a href="#" class="ViewMore__link">
               <span>VIEW MORE</span>
               <img src="/assets/img/triangle-white.png" alt="" class="ViewMore__image">
@@ -193,8 +196,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <div class="section__inner">
 
           <div class="Section__title Member__title">
-            <img src="./assets/img/title_member.svg" alt="" class="Member__title-image">
-            <p class="Section__title-sub">事業内容</p>
+            <p class="Section__title-english split">MEMBER</p>
+            <h2 class="Section__title-sub js-fadeIn">事業内容</h2>
 
           </div>
 
@@ -203,16 +206,28 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <img src="./assets/img/mv_slide01.png" alt="">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
                   </li>
                   <li class="splide__slide">
-                    <img src="./assets/img/mv_slide01.png" alt="">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
                   </li>
                   <li class="splide__slide">
-                    <img src="./assets/img/mv_slide01.png" alt="">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
                   </li>
                   <li class="splide__slide">
-                    <img src="./assets/img/mv_slide01.png" alt="">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./assets/img/mv_slide01.png" class="js-zoomIn" alt="">
                   </li>
 
 
@@ -229,14 +244,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
 
 
-      <section class="News">
+      <section class="Post News">
         <div class="section__inner">
 
-          <div class="Section__title News__title">
-            <img src="./assets/img/title_news.svg" alt="" class="News__title-image">
-            <p class="Section__title-sub">お知らせ</p>
+          <div class="Section__title">
+            <p class="Section__title-english split">NEWS</p>
+            <h2 class="Section__title-sub js-fadeIn">お知らせ</h2>
 
-            <div class="ViewMore">
+            <div class="ViewMore js-fadeIn">
               <a href="#" class="ViewMore__link">
                 <span>VIEW MORE</span>
                 <img src="/assets/img/triangle.png" alt="" class="ViewMore__image">
@@ -246,28 +261,91 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           </div>
 
           <div class="section__content News__content">
-            <div class="News__content">
-              <ul class="News__list">
-                <li class="News__item">
-                  <div class="News__item-head">
-                    <span class="News__date">2025.03.10</span>
-                    <span class="News__category">カテゴリー</span>
-                  </div>
-                  <span class="News__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</span>
+            <div class="Post__content">
+              <ul class="Post__list">
+                <li class="Post__item js-fadeIn">
+                  <a href="" class="Post__item-link">
+                    <div class="Post__item-head">
+                      <span class="Post__date">2025.03.10</span>
+                      <span class="Post__category">カテゴリー</span>
+                    </div>
+                    <span class="Post__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</span>
+                  </a>
                 </li>
-                <li class="News__item">
-                  <div class="News__item-head">
-                    <span class="News__date">2025.03.10</span>
-                    <span class="News__category">カテゴリー</span>
-                  </div>
-                  <span class="News__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</span>
+                <li class="Post__item js-fadeIn">
+                  <a href="" class="Post__item-link">
+                    <div class="Post__item-head">
+                      <span class="Post__date">2025.03.10</span>
+                      <span class="Post__category">カテゴリー</span>
+                    </div>
+                    <span class="Post__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</span>
+                  </a>
                 </li>
-                <li class="News__item">
-                  <div class="News__item-head">
-                    <span class="News__date">2025.03.10</span>
-                    <span class="News__category">カテゴリー</span>
-                  </div>
-                  <span class="News__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</span>
+                <li class="Post__item js-fadeIn">
+                  <a href="" class="Post__item-link">
+                    <div class="Post__item-head">
+                      <span class="Post__date">2025.03.10</span>
+                      <span class="Post__category">カテゴリー</span>
+                    </div>
+                    <span class="Post__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</span>
+                  </a>
+                </li>
+
+
+
+              </ul>
+            </div>
+
+
+          </div>
+
+        </div>
+      </section>
+      <section class="Post PressRelease">
+        <div class="section__inner">
+
+          <div class="Section__title">
+            <p class="Section__title-english split">PR</p>
+            <h2 class="Section__title-sub js-fadeIn">お知らせ</h2>
+
+            <div class="ViewMore js-fadeIn">
+              <a href="#" class="ViewMore__link">
+                <span>VIEW MORE</span>
+                <img src="/assets/img/triangle.png" alt="" class="ViewMore__image">
+              </a>
+            </div>
+
+          </div>
+
+          <div class="section__content News__content">
+            <div class="Post__content">
+              <ul class="Post__list">
+                <li class="Post__item js-fadeIn">
+                  <a href="" class="Post__item-link">
+                    <div class="Post__item-head">
+                      <span class="Post__date">2025.03.10</span>
+                      <span class="Post__category">カテゴリー</span>
+                    </div>
+                    <span class="Post__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</span>
+                  </a>
+                </li>
+                <li class="Post__item js-fadeIn">
+                  <a href="" class="Post__item-link">
+                    <div class="Post__item-head">
+                      <span class="Post__date">2025.03.10</span>
+                      <span class="Post__category">カテゴリー</span>
+                    </div>
+                    <span class="Post__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</span>
+                  </a>
+                </li>
+                <li class="Post__item js-fadeIn">
+                  <a href="" class="Post__item-link">
+                    <div class="Post__item-head">
+                      <span class="Post__date">2025.03.10</span>
+                      <span class="Post__category">カテゴリー</span>
+                    </div>
+                    <span class="Post__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</span>
+                  </a>
                 </li>
 
 
@@ -280,25 +358,113 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         </div>
       </section>
 
-      <section class="">
+      <section class="Column">
         <div class="section__inner">
 
-          <div class="section__title">
-            <h2>タイトルタイトル</h2>
-          </div>
+          <div class="Column__wrap">
+            <div class="Section__title">
+              <p class="Section__title-english split">COLUMN</p>
+              <h2 class="Section__title-sub js-fadeIn">お役立ち情報</h2>
+            </div>
+            <div class="section__content">
+              <ul class="Column__list">
+                <li class="Column__item">
+                  <a href="" class="column__item-link">
+                    <img src="./assets/img/mv_slide01.png" alt="" class="Column__item-image js-zoomIn">
+                    <p class="Column__item-title js-fadeIn">貴社の営業部、事業戦略部として、有効セグメントの開拓やアポイント</p>
+                    <span class="Column__item-category js-fadeIn">カテゴリーカテゴリー</span>
+                    <span class="Column__item-date js-fadeIn">2025.0101</span>
+                  </a>
+                </li>
+                <li class="Column__item">
+                  <a href="" class="column__item-link">
+                    <img src="./assets/img/mv_slide01.png" alt="" class="Column__item-image js-zoomIn">
+                    <p class="Column__item-title js-fadeIn">貴社の営業部、事業戦略部として、有効セグメントの開拓やアポイント</p>
+                    <span class="Column__item-category js-fadeIn">カテゴリーカテゴリー</span>
+                    <span class="Column__item-date js-fadeIn">2025.0101</span>
+                  </a>
+                </li>
+                <li class="Column__item">
+                  <a href="" class="column__item-link">
+                    <img src="./assets/img/mv_slide01.png" alt="" class="Column__item-image js-zoomIn">
+                    <p class="Column__item-title js-fadeIn">貴社の営業部、事業戦略部として、有効セグメントの開拓やアポイント</p>
+                    <span class="Column__item-category js-fadeIn">カテゴリーカテゴリー</span>
+                    <span class="Column__item-date js-fadeIn">2025.0101</span>
+                  </a>
+                </li>
 
-          <div class="section__content">
 
-
+              </ul>
+            </div>
+            <div class="ViewMore js-fadeIn">
+              <a href="#" class="ViewMore__link">
+                <span>VIEW MORE</span>
+                <img src="/assets/img/triangle.png" alt="" class="ViewMore__image">
+              </a>
+            </div>
           </div>
 
         </div>
       </section>
 
+      <section class="Recruit">
+        <div class="section__inner">
+          <div class="Recruit__wrap">
+            <div class="Section__title">
+              <p class="Section__title-english split">RECRUIT</p>
+              <h2 class="Section__title-sub js-fadeIn">お役立ち情報</h2>
+              <p class="Section__sub-text js-fadeIn">「すべての人の夢の実現に貢献する」私達はこの理念を胸に、事業を通じ社会に対し新しい価値を創出していきます。一緒に世界の可能性を広げるメンバーを募集しています。</p>
+              <div class="ViewMore js-fadeIn">
+                <a href="#" class="ViewMore__link">
+                  <span>VIEW MORE</span>
+                  <img src="/assets/img/triangle.png" alt="" class="ViewMore__image">
+                </a>
+              </div>
+            </div>
+            <div class="Recruit__image-wrap js-fadeIn">
+              <img src="./assets/img/mv_slide01.png" alt="" class="Recruit__image">
+            </div>
+
+          </div>
 
 
 
+        </div>
+      </section>
 
+      <section class="Bottom">
+
+        <div class="Bottom__wrap">
+          <div class="Bottom__content-wrap --Contact">
+            <div class="Bottom__slide"></div>
+            <div class="Bottom__content">
+              <h2 class="Bottom__content-title">CONTACT</h2>
+              <span class="Bottom__content-sub">お問い合わせ</span>
+              <p class="Bottom__content-text">ご相談やお問い合わせはこちら</p>
+              <div class="ViewMore --BottomContent --ColorWhite">
+                <a href="#" class="ViewMore__link ">
+                  <span>CONTACT</span>
+                  <img src="/assets/img/triangle-white.png" alt="" class="ViewMore__image">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="Bottom__content-wrap --DownLoad">
+            <div class="Bottom__slide"></div>
+            <div class="Bottom__content">
+              <h2 class="Bottom__content-title">DOWNLOAD</h2>
+              <span class="Bottom__content-sub">資料ダウンロード</span>
+              <p class="Bottom__content-text">当社の会社概要をダウンロードする</p>
+              <div class="ViewMore --BottomContent --ColorWhite">
+                <a href="#" class="ViewMore__link">
+                  <span>DOWNLOAD</span>
+                  <img src="/assets/img/triangle-white.png" alt="" class="ViewMore__image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
     </main>
@@ -306,8 +472,49 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
 
     <footer>
+      <div class="Footer__content">
+        <div class="Footer__content-left">
+         <img src="./assets/img/footer_logo.svg" alt="" class="Footer__logo js-fadeIn-footer js-fadeIn">
+         <p class="Footer__company js-fadeIn-footer js-fadeIn">株式会社NSJAPAN</p>
+         <span class="Footer__address js-fadeIn-footer js-fadeIn">〒102-0083<br>東京都千代田区麹町4丁目4-4 ACN麹町ビル</span>
+        </div>
+        <div class="Footer__content-right">
+          <ul class="Footer__list">
+            <li class="Footer__list-item js-fadeIn-footer js-fadeIn">
+              <a href="" class="Footer__link">トップページ</a>
+            </li>
+            <li class="Footer__list-item js-fadeIn-footer js-fadeIn">
+              <a href="" class="Footer__link">会社概要</a>
+            </li>
+          </ul>
+          <ul class="Footer__list">
+            <li class="Footer__list-item js-fadeIn-footer js-fadeIn">
+              <a href="" class="Footer__link">事例</a>
+            </li>
+            <li class="Footer__list-item js-fadeIn-footer js-fadeIn">
+              <a href="" class="Footer__link">イベント</a>
+            </li>
+            <li class="Footer__list-item js-fadeIn-footer js-fadeIn">
+              <a href="" class="Footer__link">採用情報</a>
+            </li>
+            <li class="Footer__list-item js-fadeIn-footer js-fadeIn">
+              <a href="" class="Footer__link">PR</a>
+            </li>
+            <li class="Footer__list-item js-fadeIn-footer js-fadeIn">
+              <a href="" class="Footer__link">お問い合わせ</a>
+            </li>
+            <li class="Footer__list-item js-fadeIn-footer js-fadeIn">
+              <a href="" class="Footer__link">資料ダウンロード</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <span class="Footer__copy">
+        &copy; 2025 NSJAPAN
+      </span>
 
     </footer>
+
 
 
   </div>
@@ -316,6 +523,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   <!-- swiper -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
 
   <script src="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js

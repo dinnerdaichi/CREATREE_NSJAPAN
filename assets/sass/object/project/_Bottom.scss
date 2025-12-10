@@ -1,0 +1,111 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/functions" as *;
+@use "../../foundation/base" as *;
+
+
+.Bottom {
+  height: rclamp(428);
+
+  .ViewMore {
+    border-bottom: rclamp(1) solid white;
+
+    &.--BottomContent {
+
+      .ViewMore__link {
+        color: white;
+      }
+
+
+    }
+
+  }
+
+}
+
+.Bottom__wrap {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.Bottom__content-wrap {
+  height: 100%;
+  margin-inline: auto;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+
+  .Bottom__slide{
+    position: absolute;
+    top: 0;
+    left: -100%;    /* 左に隠してスタート */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  &.--Contact {
+
+    .Bottom__slide{
+     background-color: #004FA9;
+    }
+
+  }
+
+  &.--DownLoad {
+    .Bottom__slide{
+     background-color: #232365;
+    }
+
+  }
+}
+
+
+.Bottom__content {
+  width: rclamp(460);
+  padding-block-start: rclamp(80);
+  padding-block-end: rclamp(102);
+  text-align: left;
+  margin-inline: auto;
+  color: white;
+  height: 100%;
+  display: grid;
+  grid-area: 1 / 1 / 2 / 2;
+
+}
+
+.Bottom__content-title {
+  font-size: rclamp(72);
+  font-weight: 500;
+  // line-height: 1.5;
+  font-family: var(--font-Mincho);
+
+
+}
+
+.Bottom__content-sub {
+  font-size: rclamp(14);
+  font-weight: 600;
+  line-height: 2;
+  display: block;
+  margin-top: rclamp(8);
+}
+
+.Bottom__content-text {
+  font-size: rclamp(18);
+  font-weight: 600;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  margin-block-end: rclamp(30);
+  margin-block-start: rclamp(40);
+}
+
+
+
+
+
+.ViewMore__image {}
